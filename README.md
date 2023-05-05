@@ -1,6 +1,11 @@
 # keyvault-backend-api
 Keyvault's backend api for the Scrum project
 
+Live API URL below:
+```
+https://keyvault-api.onrender.com/
+```
+
 ## API to interact with the application's database and handle user authentication, password storage, and retrieval.
 
 ## Design and Maitenance of the application's database schema's, and also securing user's data (encripting users password)
