@@ -8,20 +8,18 @@ app.use(cors({credentials: true, origin: 'http://localhost:3000'}));
 app.use(cookieParser());   
 
 // SETTING UP DOTENV
-dotenv.config({ path: "./config.env" });
+dotenv.config({ path: "./.env" });
 
 const PORT = process.env.PORT || 8000;
 
 // CONNECTING WITH DATABASE
-require("./db/connection");
+require("./config/database");
 
 app.use(express.json());
 
 
 // LINKING THE ROUTER FILES 
-app.use(require("./router/routing"));
-
-
+app.use(require("./routes/index.routes"));
 
 
 // LISTENING TO PORT 

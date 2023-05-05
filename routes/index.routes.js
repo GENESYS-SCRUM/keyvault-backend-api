@@ -2,8 +2,13 @@ const express = require("express");
 const router = express.Router();
 const User = require("../models/schema");
 const bcrypt = require("bcrypt");
-const authenticate = require("../middlewares/authenticate");
-const { encrypt, decrypt } = require("../models/EncDecManager");
+const authenticate = require("../middlewares/index.middleware");
+const { encrypt, decrypt } = require("../models/encryption");
+
+// Define a route for the homepage
+router.get('/', (req, res) => {
+    res.send('Welcome to the KeyVault app!');
+  });
 
 router.post("/register", async (req, res) =>
 {
