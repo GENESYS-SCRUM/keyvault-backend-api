@@ -3,9 +3,7 @@ const database = "mongodb+srv://DavidOduse:David1996%40@cluster0.pl4a4kq.mongodb
 
 mongoose.connect(database, {
     useNewUrlParser: true,
-    useCreateIndex: true,
     useUnifiedTopology: true,
-    useFindAndModify: false,
 })
 .then(() =>
 {
